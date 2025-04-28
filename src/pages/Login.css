@@ -1,7 +1,7 @@
 .background-image {
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; 
+    
     height: 100%; 
     color: white; 
   }
@@ -11,5 +11,5 @@
     border-radius: 10px; 
   }
   ion-content {
-    --background: url('https://i.pinimg.com/originals/1d/30/b5/1d30b5a0c298c02edaf2f501b22a6587.gif') no-repeat center center / cover;
+    --background: url('https://giffiles.alphacoders.com/220/220069.gif') center center / cover;
   }

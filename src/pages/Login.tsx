@@ -4,14 +4,12 @@ import {
   IonAvatar,
   IonButton,
   IonContent, 
-  IonIcon, 
   IonInput, 
   IonInputPasswordToggle,  
   IonPage,  
   IonToast,  
   useIonRouter
 } from '@ionic/react';
-import { logoIonic } from 'ionicons/icons';
 import { createClient } from '@supabase/supabase-js';
 import './Login.css'; 
 
@@ -27,6 +25,7 @@ const AlertBox: React.FC<{ message: string; isOpen: boolean; onClose: () => void
       message={message}
       buttons={['OK']}
     />
+
   );
 };
 
@@ -37,7 +36,6 @@ const Login: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
-
   const doLogin = async () => {
     if (email === '' || password === '') {
       setAlertMessage('Please enter both email and password.');
@@ -62,7 +60,6 @@ const Login: React.FC = () => {
   const goToRegister = () => {
     navigation.push('/it35-lab/register', 'forward', 'replace'); // Navigate to the Register page
   }
-
   return (
     <IonPage>
       <IonContent className='ion-padding'>
@@ -80,21 +77,21 @@ const Login: React.FC = () => {
               justifyContent: 'center',
               width: '150px',
               height: '150px',
-              borderRadius: '50%', 
+              borderRadius: '50%',
               overflow: 'hidden' 
             }}
           >
-            <IonIcon 
-              icon={logoIonic}
-              color='primary'
-              style={{ fontSize: '120px', color: '#6c757d' }} 
+            <img 
+              src="https://images.steamusercontent.com/ugc/2021605474922735510/32F19662919609FCA58F3FBACF6C5380E1EC6310/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true" 
+              alt="Logo" 
+              style={{ width: '100%', height: '100%' }} 
             />
           </IonAvatar>
           <h1 style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-          }}>USER LOGIN</h1>
+          }}>ONEPIECE USER LOGIN</h1>
           <IonInput
             label="Email" 
             labelPlacement="floating" 
@@ -124,7 +121,6 @@ const Login: React.FC = () => {
 
         {/* Reusable AlertBox Component */}
         <AlertBox message={alertMessage} isOpen={showAlert} onClose={() => setShowAlert(false)} />
-
         {/* IonToast for success message */}
         <IonToast
           isOpen={showToast}
@@ -138,5 +134,4 @@ const Login: React.FC = () => {
     </IonPage>
   );
 };
-
 export default Login;

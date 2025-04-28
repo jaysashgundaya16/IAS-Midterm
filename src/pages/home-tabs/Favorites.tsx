@@ -6,67 +6,45 @@ import {
   IonPage, 
   IonTitle, 
   IonToolbar,
-  IonItem,
-  IonLabel,
-  IonSpinner
-  } from '@ionic/react';
-  import { pin, share, trash, call } from 'ionicons/icons';
-  const Favorites: React.FC = () => {
-    return (
-      <IonPage>
-        <IonHeader>
-          <IonToolbar>
-            <IonButtons slot='start'>
-              <IonMenuButton></IonMenuButton>
-            </IonButtons>
-            <IonTitle>Spinner</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <IonContent fullscreen color = "light">
-        <IonItem>
-        <IonLabel>Default</IonLabel>
-        <IonSpinner></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Dots</IonLabel>
-        <IonSpinner name="dots"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Lines</IonLabel>
-        <IonSpinner name="lines"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Lines Small</IonLabel>
-        <IonSpinner name="lines-small"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Lines Sharp</IonLabel>
-        <IonSpinner name="lines-sharp"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Lines Sharp Small</IonLabel>
-        <IonSpinner name="lines-sharp-small"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Bubbles</IonLabel>
-        <IonSpinner name="bubbles"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Circles</IonLabel>
-        <IonSpinner name="circles"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Circular</IonLabel>
-        <IonSpinner name="circular"></IonSpinner>
-      </IonItem>
-      <IonItem>
-        <IonLabel>Crescent</IonLabel>
-        <IonSpinner name="crescent"></IonSpinner>
-      </IonItem>
-      
-                 
-        </IonContent>
-      </IonPage>
-    );
-  };
-  export default Favorites;
+  IonButton
+} from '@ionic/react';
+
+const Favorites: React.FC = () => {
+  return (
+    <IonPage>
+      <IonHeader>
+        <IonToolbar color="light">
+          <IonButtons slot="start">
+            <IonMenuButton />
+          </IonButtons>
+          <IonTitle>Jaysash G.</IonTitle>
+          <IonButtons slot="end">
+            <IonButton fill="outline" size="small">Contact</IonButton>
+          </IonButtons>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen color="light" className="ion-padding">
+        <div style={{ 
+          display: 'flex', 
+          flexDirection: 'column', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          height: '100%', 
+          textAlign: 'center'
+        }}>
+          <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold' }}>
+            Digital Designer <span style={{ fontSize: '2rem', fontWeight: 'normal' }}>&</span> <br />
+            Webflow Developer
+          </h1>
+          <p style={{ marginTop: '1rem', maxWidth: '500px', fontSize: '1rem', color: '#666' }}>
+            I'm Jay, a digital designer and creative Webflow developer —
+            I collaborate with brands globally to design impactful, mission-focused websites
+            that drive results and achieve business goals.
+          </p>
+        </div>
+      </IonContent>
+    </IonPage>
+  );
+};
+
+export default Favorites;
